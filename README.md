@@ -1,3 +1,24 @@
+# Online Course App with Assessment Feature
+
+A Django online course application extended with an exam (assessment) feature:
+
+- **Models:** `Question`, `Choice` and `Submission` in `onlinecourse/models.py`
+- **Admin:** `QuestionInline`, `ChoiceInline`, `QuestionAdmin` and `LessonAdmin` in `onlinecourse/admin.py`
+- **Course page:** `course_details_bootstrap.html` lists the lessons and a collapsible exam form
+- **Views:** `submit` records the learner's selected choices; `show_exam_result` scores the exam
+- **Result page:** pass (score above 80) shows a Congratulations message, the score and per-question results
+
+## Run Locally
+
+```bash
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
+
+Open http://127.0.0.1:8000/onlinecourse/ for the app and http://127.0.0.1:8000/admin/ for the admin site.
+
 
 **General Notes**
 
